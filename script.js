@@ -1,4 +1,4 @@
-import { MOVIES } from "./movies.js";
+import { MOVIES } from "./movies1.js";
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
@@ -40,7 +40,7 @@ function addImage(guessNum){
     //     document.getElementsByClassName["column"].style.flex = "50%";
     // }   
     let img = document.createElement("img");
-    img.src = `images/testImage${guessNum}.jpg`;
+    img.src = `images/${random_movie}/${random_movie}${guessNum+1}.jpg`;
     // space.appendChild(img);
     document.getElementById(`column${guessNum}`).appendChild(img);
     
@@ -51,16 +51,18 @@ function addImage(guessNum){
  var guessNum = 1
 
 function randMovie(){
+    
     let random_movie = MOVIES[Math.floor(Math.random() * MOVIES.length)]
     return random_movie
 }
 
-function randomFrames(film_name){   
+function randomFrames(film_name){       
     return
 }
 
 
 const random_movie = randMovie()
+console.log(random_movie)
 
 
 addImage(1)
