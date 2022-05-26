@@ -47,6 +47,13 @@ function addImage(guessNum){
 
 }
 
+function addPoster(){
+    const poster = document.createElement("img");
+    poster.src = `images/${random_movie}/${random_movie}1.jpg`;
+    document.getElementById('image-poster').appendChild(poster);
+
+}
+
 
  var guessNum = 1
 
@@ -60,12 +67,19 @@ function randomFrames(film_name){
     return
 }
 
-
+// RANDOM MOVIE 
 const random_movie = randMovie()
 console.log(random_movie)
-
-
+addPoster()
 addImage(1)
+
+
+
+function revealPoster(){
+
+    document.getElementById('image-poster').style.filter = "blur(0px)"
+}
+
 //Checking user input
 const form = document.getElementById('guessForm');
 form.addEventListener('submit', function(e) {
@@ -83,8 +97,12 @@ form.addEventListener('submit', function(e) {
         console.log(random_movie)
         guess_status.innerHTML = random_movie + " is the movie!"
         guess_status.style.color = "#73BE73"
+        revealPoster()
 
     
+    }
+    else if (guessNum == 6){
+        //end game
     }
     else{
         console.log(random_movie)

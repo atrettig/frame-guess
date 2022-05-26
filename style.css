@@ -37,10 +37,24 @@ h1 {
 
 
 
-
 .inputForm{
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex: 50%; */
+    justify-content: center;
+    /* border: 2px black solid; */
+    
+}
+
+#image-poster{
+    padding-right: 5%;
+    filter: blur(30px);
+}
+#image-poster img{  
+    box-shadow: 0px 0px 80px black;
+    
 }
 
   * {
@@ -133,12 +147,13 @@ h1 {
   }
 
   .column{
-    /* flex: 16.66%; */
 
-      /* width: 50%; */
-        flex: 33%;
-    /* padding:  4px; */
+    flex: 33%;
+    /* flex: 100%; */
     padding: 10px;
+    /* border: black solid 2px; */
+
+
 
       
   }
@@ -157,4 +172,25 @@ h1 {
       text-align: center;
       padding-bottom: 60px;
       font-size: 30px;
+  }
+
+  #guessForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  /* MEDIA QUERIES */
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    
+    #imageContainer img{
+        max-width: 300px;;
+    }
+
   }
