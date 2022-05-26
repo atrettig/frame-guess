@@ -193,9 +193,32 @@ h1 {
   }
 
 
-  
+  #header{
+      display: flex;
+      margin-bottom: 5%;
+      text-align: center;
+      justify-content: space-evenly;
+      align-items: center;
+  } 
+  .title{
+      text-align: center;
+
+    }
+
+    .start-again-button{
+        background-color: #0c4a48;
+        border-radius: 10px;
+    }
 
 
+    #start-again-button-right{
+        background-color: #0c4a48;
+        border-radius: 10px;
+
+    }
+    #start-again-button-left{
+        visibility: hidden;
+    }
 
 
 

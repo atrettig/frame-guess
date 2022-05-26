@@ -62,7 +62,6 @@ function addPoster(){
 
 }
 
-
 var guessNum = 1
 
 function randMovie(){
@@ -71,11 +70,8 @@ function randMovie(){
     return random_movie
 }
 
-function randomFrames(film_name){   
-        
-    return
     
-}
+
 
 // RANDOM MOVIE 
 const random_movie = randMovie()
@@ -117,6 +113,7 @@ form.addEventListener('submit', function(e) {
         guess_status.innerHTML = "The movie is " +  random_movie 
         // guess_status.style.color = "#73BE73"
         revealPoster()
+
     }
     else{
         // console.log(random_movie)

@@ -13,7 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> Movie Frame Guessing Game</h1>
+    <div id="header">
+        <!-- <input type="submit" value="Start Again" class = "start-again-button" id="start-again-button-left" onclick="startAgain()"> -->
+        <button class = "start-again-button" id="start-again-button-left" >Start Again</button>
+
+        
+        <h1 class="title"> Movie Frame Guessing Game</h1>
+        <input type="submit" value="Start Again" class = "start-again-button" id="start-again-button-right" onclick="location.reload();">
+
+    </div>
 
 
      <div id="inputContainer">
@@ -27,13 +35,14 @@
                 <div class="autocomplete" style="width:300px;">
                     <input id="myInput" type="text" name="myCountry" placeholder="Movie">
                 </div>
-                <input type="submit" value="guess" id="submit-button">
+                <input type="submit" value="Guess" id="submit-button">
             </form>
         </div>
     </div>   
 
     <div id="guess-status-div">
         <p id="guess-status"> </p>
+
     </div>
 
 
