@@ -51,6 +51,8 @@ h1 {
 #image-poster{
     padding-right: 5%;
     filter: blur(30px);
+    transition-property: filter;
+    transition-duration: .5s;
 }
 #image-poster img{  
     box-shadow: 0px 0px 80px black;
@@ -189,6 +191,12 @@ h1 {
   #myInput{
       border-radius: 10px;
   }
+
+
+  
+
+
+
 
 
 

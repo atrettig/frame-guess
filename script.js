@@ -31,16 +31,24 @@ function initBoard(){
 
 // initBoard()
 function addImage(guessNum){
-    // let space = document.getElementById("imageContainer");
-    // if (guessNum == 1) {
-    //     document.getElementsByClassName["column"].style.flex = "50%";
 
-    // }
-    // else{
-    //     document.getElementsByClassName["column"].style.flex = "50%";
-    // }   
+    console.log(nums)   
+    let randIndex = Math.floor(Math.random() * nums.length-1) +1;
+    let randNum = nums[randIndex]
+    
+    
+    
+    console.log("Index: " + randIndex)
+    console.log("random number: " + randNum)
+    
+    nums.splice(randIndex,1) 
+    // console.log("Number list: " + nums)
+    
+
     let img = document.createElement("img");
-    img.src = `images/${random_movie}/${random_movie}${guessNum+1}.jpg`;
+    // img.src = `images/${random_movie}/${random_movie}${guessNum+1}.jpg`;
+    img.src = `images/${random_movie}/${random_movie}${randNum}.jpg`;
+    console.log(`images/${random_movie}/${random_movie}${randNum}.jpg`);
     // space.appendChild(img);
     document.getElementById(`column${guessNum}`).appendChild(img);
     
@@ -55,7 +63,7 @@ function addPoster(){
 }
 
 
- var guessNum = 1
+var guessNum = 1
 
 function randMovie(){
     
@@ -63,15 +71,22 @@ function randMovie(){
     return random_movie
 }
 
-function randomFrames(film_name){       
+function randomFrames(film_name){   
+        
     return
+    
 }
 
 // RANDOM MOVIE 
 const random_movie = randMovie()
 console.log(random_movie)
+const nums = [2,3,4,5,6,7,8,9,10,11,12];
 addPoster()
 addImage(1)
+
+
+var guess_status = document.getElementById('guess-status')
+guess_status.innerHTML = "Guess the movie from the frames below. " + "Guess " + guessNum + "/6"
 
 
 
@@ -90,9 +105,6 @@ form.addEventListener('submit', function(e) {
 
    
 
-    let guess_status = document.getElementById('guess-status')
-
-
     if (guess.value == random_movie) {
         console.log(random_movie)
         guess_status.innerHTML = random_movie + " is the movie!"
@@ -102,13 +114,15 @@ form.addEventListener('submit', function(e) {
     
     }
     else if (guessNum == 6){
-        //end game
+        guess_status.innerHTML = "The movie is " +  random_movie 
+        // guess_status.style.color = "#73BE73"
+        revealPoster()
     }
     else{
-        console.log(random_movie)
+        // console.log(random_movie)
         guessNum++
         addImage(guessNum)
-        guess_status.innerHTML = guess.value + " is not the movie"
+        guess_status.innerHTML = guess.value + " is not the movie. " + "Guess " + guessNum + "/6" 
         
 
     }
