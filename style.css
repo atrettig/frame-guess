@@ -180,6 +180,16 @@ h1 {
     align-items: center;
   }
 
+  #submit-button{
+      background-color: #0c4a48;
+      border-radius: 10px;
+      margin-left: 5px;
+  }
+
+  #myInput{
+      border-radius: 10px;
+  }
+
 
 
   /* MEDIA QUERIES */
